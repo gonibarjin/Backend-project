@@ -1,0 +1,29 @@
+POST http://localhost:3000/api/entries
+Content-Type: application/json
+
+{
+    "title": "Sekiro",
+    "content": "Sekiro unlike the souls-borne games is a souls-like and has japanese themes like shinobis, the combat is fast and intense!"
+}
+
+###
+
+GET http://localhost:3000/api/entries
+
+###
+
+GET http://localhost:3000/api/entries/67fd18f227cabbdea97a9825
+
+###
+
+PUT http://localhost:3000/api/entries/67fd18f227cabbdea97a9825
+Content-Type: application/json
+
+{
+  "title": "Updated title",
+  "content": "Updated content"
+}
+
+###
+
+DELETE http://localhost:3000/api/entries/67fd18f227cabbdea97a9825
