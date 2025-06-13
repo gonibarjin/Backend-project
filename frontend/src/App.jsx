@@ -130,6 +130,7 @@ function App() {
                     Edit Title
                   </label>
                   <input
+                    id={`edit-title-${entry._id}`}
                     className="edit-title-input"
                     type="text"
                     value={editTitle}
@@ -142,6 +143,7 @@ function App() {
                     Edit Content
                   </label>
                   <input
+                    id={`edit-content-${entry._id}`}
                     className="edit-content-input"
                     type="text"
                     value={editContent}
@@ -212,6 +214,7 @@ function App() {
               <form onSubmit={handleSubmit}>
                 <label htmlFor="title">Title</label>
                 <input
+                  id="title"
                   type="text"
                   placeholder="Title"
                   value={title}
@@ -221,6 +224,7 @@ function App() {
                 <br />
                 <label htmlFor="content">Content</label>
                 <textarea
+                  id="content"
                   placeholder="Content"
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
@@ -244,14 +248,13 @@ function App() {
       </section>
       <CookieConsent
         location="bottom"
-        buttonText="Accept"
+        buttonText="OK"
         cookieName="userConsent"
         style={{ background: "#2B373B" }}
         buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
         expires={150}
       >
-        We use cookies to understand how users interact with this site. Please
-        click "Accept" so I can do anonymous tracking!
+        We use cookies to understand how users interact with this site.
       </CookieConsent>
     </main>
   );
